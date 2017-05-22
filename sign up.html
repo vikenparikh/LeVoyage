@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	   <style>
+		label:hover {
+                  	font-weight: bold;}
+		input:hover{ font-weight: bold; }
+		fieldset { position: relative;
+               left: 25%;
+			   top:20%;
+		        font-family: Kozuka Gothic Pr6N B;
+				background:white-space; 
+				margin-bottom:10px;
+				width:50% ;	}
+	 	label {	position: relative;
+                width:220px;
+				display:inline-block;
+				text-align:right; 
+				vertical-align:text-top; 
+				font-size:20px;}
+
+
+@-webkit-keyframes scroll {
+  from {
+    left: 0px;
+  }
+  50% {
+    left: -320px;
+  }
+  to {
+    left: -640px;
+  }
+}
+
+div {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat-x;
+}
+
+div#back {
+  -webkit-animation: scroll 30s infinite linear;
+  background-image:url(bla1234.jpg)
+  
+}
+
+body {
+  background: #BC9447;
+}
+	   </style>
+	</head>
+<body >
+<h1 align = "center">Please Enter Your Details For Our Website </h1>
+<form method="post" enctype="multipart/form-data">
+	<fieldset>
+		<legend> Your general details: </legend>
+		<label for="Name"> Name:</label>
+		<input type="text" name="Name" placeholder="Your Full Name" required><br>
+		<label for="sex"> Gender:</label>
+			<input type="radio" name="sex" value="male">Male
+			<input type="radio" name="sex" value="female">Female <br>
+		<label for= "age"> Age:</label> 
+		 <input type="number" min="0" max="100" step="1" value="18" 
+			id="age" name="age" required><br>
+		<label for= "dob"> Date Of Birth :  </label> 
+		 <input type="date" id="dob" name="dob" ><br>
+		<label for= "favcolor"> Favourite Color :  </label> 
+		 <input type="color" id="favcolor" name="favcolor" ><br>
+		<label for="Your Country"> Your Country:</label>
+			 <select>
+				<option value="no selection">No selection</option>
+				<option value="india">India</option>
+				<option value="usa">USA</option>			
+				<option value="uk">UK</option>
+				<option value="china">China</option>
+				<option value="japan">Japan</option>
+				<option value="Pakistan">Pakistan</option>
+				<option value="Bla Bla">Bla Bla</option>
+			</select>
+	</fieldset>
+	<fieldset>
+		<legend>Your Contact Information: </legend>
+		<label for= "mail"> Email ID:</label> 
+		<input type="email" id="mail" name="mail" required> <br>
+		<label for= "mobileno"> Mobile No:</label> 
+		<input type="tel"  id="mobileno" name="mobileno"> <br>
+		<label for="add"> Address:</label>
+		<textarea rows="4" cols="50"> </textarea><br>
+		<label for="items"> Method To Contact You: </label>
+		<input type="checkbox" name="items" value="whatsapp">Whatsapp
+		<input type="checkbox" name="items" value="email">Email
+		<input type="checkbox" name="items" value="in-app chat">In-app Chat
+	</fieldset>
+	<fieldset>
+	<input type="submit" value="Submit"></fieldset>
+
+</form>
+<div id="back" style='z-index:-2;' ></div>
+</body>
+</html>
